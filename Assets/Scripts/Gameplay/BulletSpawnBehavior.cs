@@ -17,8 +17,10 @@ public class BulletSpawnBehavior : MonoBehaviour
         // The Gameobject is set to be the bullet that is spawned
         GameObject BulletShot = Instantiate(_bullet, transform.position, transform.rotation);
 
+        // Gets and adds the bullet behavior to the shot bullet
         BulletBehavior bulletBehavior = BulletShot.GetComponent<BulletBehavior>();
 
+        // If the bullet behavior is not null add a force to its body equal to the false
         if (bulletBehavior)
             bulletBehavior.Rigidbody.AddForce(Force, ForceMode.Impulse);
     }

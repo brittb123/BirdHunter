@@ -19,6 +19,8 @@ public class BulletBehavior : MonoBehaviour
         }
             
     }
+
+    // A function to put the rigidbody and set it to be active
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -30,6 +32,8 @@ public class BulletBehavior : MonoBehaviour
         Destroy(gameObject, _despawnTimer); 
     }
 
+    // If the object colliding with the tag target is hit, 
+    // it calls the destroy function
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Target"))
