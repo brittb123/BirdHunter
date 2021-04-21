@@ -20,7 +20,7 @@ public class PlayerGunBehavior : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
+        Vector3 moveDirection = new Vector3(0, 0, 0);
 
         Vector3 velocity = moveDirection * _speed * Time.deltaTime;
 
@@ -32,9 +32,10 @@ public class PlayerGunBehavior : MonoBehaviour
 
         if(Physics.Raycast(ray, out Hit))
         {
-            Vector3 look = new Vector3(transform.position.x, Hit.point.y, transform.position.z) - transform.position;
+            Vector3 look = new Vector3(transform.position.x,  Hit.point.y, transform.position.z) - transform.position;
 
             Quaternion rotate = Quaternion.LookRotation(look);
+            
 
             _rigidbody.MoveRotation(rotate);
         }
