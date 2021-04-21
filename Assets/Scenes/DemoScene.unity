@@ -292,8 +292,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yMin: 1
-  yMax: 4
-  TimeInterval: 3
+  yMax: 2.5
+  MinTimeInterval: 2
+  MaxTimeInterval: 4
   GameOver: 0
   TargetRef: {fileID: 3025421740524272652, guid: 3f71d057611229343a25963a69deada2,
     type: 3}
@@ -622,7 +623,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 0
+        m_CallState: 2
 --- !u!114 &866518438
 MonoBehaviour:
   m_ObjectHideFlags: 0
